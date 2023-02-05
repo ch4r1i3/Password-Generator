@@ -6,7 +6,7 @@
 
 html,
 body,
-.wrapper {
+.tittle {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ body {
   background-color: #f9fbfd;
 }
 
-.wrapper {
+.tittle {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
@@ -62,7 +62,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: white;
   height: 2px;
 }
 
@@ -74,11 +74,11 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: rgb(50, 8, 175);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+  box-shadow: black
     0px;
-  color: hsl(0, 0%, 100%);
+  color: white;
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
@@ -90,7 +90,7 @@ header {
 
 button[disabled] {
   cursor: default;
-  background: #c0c7cf;
+  background: #cfd4da;
 }
 
 .float-right {

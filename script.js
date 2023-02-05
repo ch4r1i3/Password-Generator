@@ -20,26 +20,26 @@ function generatePassword() {
 
   var userInput = window.prompt("How many characters do you want your password to have?")
 
-  var passwordLenght = parseInt(userInput)
+  var psswrdLenght = parseInt(userInput)
 
   if(userInput === null) {
     return
   }
 
-  if (isNaN(passwordLenght)) {
+  if (isNaN(psswrdLenght)) {
     window.alert("Upss, sorry your answer is not a number.")
     return generatePassword() 
     }
 
-  if (passwordLenght < 8 || passwordLenght > 128) {
+  if (psswrdLenght < 8 || psswrdLenght > 128) {
     window.alert("Sorry, your password must be 8 to 128 characters long.")
     return generatePassword() 
   }
   
-  var userWantsNumbers = window.confirm ("Do you want your password to have numbers?")
-  var userWantsSymbols = window.confirm("Do you want your password to have symbols?")
-  var userWantsLowercase = window.confirm("Do you want your password to have lowercase letters?")
-  var userWantsUppercase = window.confirm("Do you want your password to have uppercase letters?")
+  var numbers = window.confirm ("Do you want your password to have numbers?")
+  var symbols = window.confirm("Do you want your password to have symbols?")
+  var lowercase = window.confirm("Do you want your password to have lowercase letters?")
+  var uppercase = window.confirm("Do you want your password to have uppercase letters?")
 
   var numberList = ["0","1","2","3","4","5","6","7","8","9"]
   var symbolsList = ["!","@","#","$","%","^","&","*"]
@@ -48,19 +48,19 @@ function generatePassword() {
 
   var optionsCart = []
 
-  if(userWantsNumbers === true) {
+  if(numbers === true) {
     optionsCart.push(numberList)
   }
 
-  if(userWantsSymbols === true) {
+  if(symbols === true) {
     optionsCart.push(symbolsList)
   }
 
-  if(userWantsLowercase === true) {
+  if(lowercase === true) {
     optionsCart.push(lowercaseList)
   }
 
-  if(userWantsUppercase === true) {
+  if(uppercase === true) {
     optionsCart.push(uppercaseList)
   }
 
@@ -70,7 +70,7 @@ function generatePassword() {
 
   var generatedPassword = ""
 
-  for (var i = 0; i < passwordLenght; i++) {
+  for (var i = 0; i < psswrdLenght; i++) {
     var randomList = getRandomItem(optionsCart)
     var randomChar = getRandomItem(randomList)
     generatedPassword += randomChar
